@@ -37,10 +37,6 @@ RUN sed -i 's/^rhq.server.management.password=.*/rhq.server.management.password=
 
 ENV RHQ_SERVER_JAVA_EXE_FILE_PATH /usr/bin/java
 
-RUN   su -l postgres -c " pg_ctl -l server.log -w stop; pg_ctl -l server.log -w start; ";\
-      su root -c '/opt/rhq-server-4.12.0/bin/rhqctl install  --agent-preference="127.0.0.1" ';
-      
-
 EXPOSE 7080
 
 ADD startRHQ.sh  /usr/local/bin/startRHQ.sh
