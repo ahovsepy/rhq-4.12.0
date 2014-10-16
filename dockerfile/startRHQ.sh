@@ -1,7 +1,7 @@
-trap 'my_exit; exit' SIGINT SIGQUIT
+trap 'rhq_exit; exit' SIGINT SIGQUIT
 count=0
 
-my_exit()
+rhq_exit()
 {
 echo "you hit Ctrl-C/Ctrl-\, now exiting.."
  su root -c '/opt/rhq-server-4.12.0/bin/rhqctl stop'
