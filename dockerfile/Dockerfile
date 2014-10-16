@@ -47,6 +47,6 @@ ADD startRHQ.sh  /usr/local/bin/startRHQ.sh
 
 RUN chmod +x /usr/local/bin/startRHQ.sh
 
-ENTRYPOINT su root -c '/usr/local/bin/startRHQ.sh'
+ENTRYPOINT su root -c './usr/local/bin/startRHQ.sh'
  
 CMD []
