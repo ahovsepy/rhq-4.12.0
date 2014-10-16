@@ -27,8 +27,8 @@ RUN wget http://sourceforge.net/projects/rhq/files/rhq/rhq-4.12/rhq-server-4.12.
 # Go to opt directory
 RUN cd /opt
 
-# Unzip rhq-server-4.9.0.zip
-RUN unzip  /opt/rhq-server-4.9.0.zip -d /opt
+# Unzip rhq-server-4.12.0.zip
+RUN unzip  /opt/rhq-server-4.12.0.zip -d /opt
 
 # Change jboss.bind.address
 RUN sed -i 's/^rhq.server.management.password=.*/rhq.server.management.password=35c160c1f841a889d4cda53f0bfc94b6/g' /opt/rhq-server-4.12.0/bin/rhq-server.properties;\
