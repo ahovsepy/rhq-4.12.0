@@ -45,6 +45,8 @@ EXPOSE 7080
 
 ADD startRHQ.sh  /usr/local/bin/startRHQ.sh
 
-ENTRYPOINT ["/usr/local/bin/startRHQ.sh"]
+RUN chmod +x /usr/local/bin/startRHQ.sh
 
+ENTRYPOINT su root -c '/usr/local/bin/startRHQ.sh'
+ 
 CMD []
