@@ -12,6 +12,7 @@ echo "Waiting 30s for DB to startup"
 sleep 30s
 #install and start rhq server/storage/agent
 su root -c ' ./opt/rhq-server-4.12.0/bin/rhqctl install --agent-preference="127.0.0.1" '
+sleep 30s
 su root -c './opt/rhq-server-4.12.0/bin/rhqctl start'
 #tail server.log
 su root -c 'tail -f /opt/rhq-server-4.12.0/logs/server.log'
