@@ -4,7 +4,7 @@ count=0
 rhq_exit()
 {
 echo "you hit Ctrl-C/Ctrl-\, now exiting.."
- su root -c '/opt/rhq-server-4.12.0/bin/rhqctl stop'
+ su root -c './opt/rhq-server-4.12.0/bin/rhqctl stop'
 }
 #start postgresql server
 su -l postgres -c " pg_ctl -l server.log -w stop; pg_ctl -l server.log -w start; "
